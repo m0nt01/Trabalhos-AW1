@@ -1,122 +1,74 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Responsivo</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Adicionei as animações aqui */
-        article {
-            animation: fadeIn 1s;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        nav ul {
-            animation: slideIn 0.5s;
-        }
-
-        @keyframes slideIn {
-            0% {
-                transform: translateX(-100%);
-            }
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        nav a:hover {
-            animation: pulse 0.5s;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        footer {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            animation: bounce 2s;
-        }
-
-        @keyframes bounce {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        article:before {
-            content: "";
-            display: block;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #333;
-            animation: loading 1s infinite;
-            margin: 20px auto;
-        }
-
-        @keyframes loading {
-            0% {
-                transform: scale(0);
-            }
-            50% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(0);
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
+<!-- index.html -->
+<nav>
+    <ul>
+        <li><a href="#" class="animated-link">Home</a></li>
+        <li><a href="#" class="animated-link">Sobre</a></li>
+        <li><a href="#" class="animated-link">Contato</a></li>
+        <li><a href="#" class="animated-link">Categorias</a>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#" class="animated-link">Categoria 1</a></li>
+                <li><a href="#" class="animated-link">Categoria 2</a></li>
+                <li><a href="#" class="animated-link">Categoria 3</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="container">
-            <article>
-                <h2>Artigo 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-            </article>
-            <article>
-                <h2>Artigo 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-            </article>
-            <!-- Adicione mais artigos aqui -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Blog Responsivo</p>
-    </footer>
-</body>
-</html>
+        </li>
+        <li><a href="create-blog.html" class="animated-link">Escrever um blog novo</a></li>
+    </ul>
+</nav>
+</header>
+
+<main>
+    <section class="container">
+        <article class="animated-article">
+            <h2>Artigo 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </article>
+        <article class="animated-article">
+            <h2>Artigo 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </article>
+        <!-- Adicione mais artigos aqui -->
+    </section>
+</main>
+
+<footer class="animated-footer">
+    <p>&copy; 2024 Blog Responsivo</p>
+</footer>
+
+<script>
+    // Add event listeners to animated links
+    document.querySelectorAll('.animated-link').forEach(link => {
+        link.addEventListener('mouseover', () => {
+            link.classList.add('animated-link-hover');
+        });
+
+        link.addEventListener('mouseout', () => {
+            link.classList.remove('animated-link-hover');
+        });
+    });
+
+    // Add event listeners to animated articles
+    document.querySelectorAll('.animated-article').forEach(article => {
+        article.addEventListener('mouseover', () => {
+            article.classList.add('animated-article-hover');
+        });
+
+        article.addEventListener('mouseout', () => {
+            article.classList.remove('animated-article-hover');
+        });
+    });
+
+    // Add event listener to "Escrever um blog novo" button
+    document.querySelector('.animated-link:last-child').addEventListener('click', () => {
+        // Create a new article element
+        const newArticle = document.createElement('article');
+        newArticle.innerHTML = `
+            <h2>New Blog Post</h2>
+            <p>This is a new blog post.</p>
+        `;
+
+        // Add the new article to the container
+        document.querySelector('.container').appendChild(newArticle);
+    });
+</script>
+
+<link rel="stylesheet" href="styles.css">

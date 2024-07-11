@@ -1,19 +1,20 @@
-/* Estilização geral */
-body {
-    font-family: Arial, sans-serif;
+/* styles.css */
+
+/* Global styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Adicionei um fundo branco */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
+/* Navigation styles */
 nav ul {
     list-style: none;
     margin: 0;
@@ -27,134 +28,66 @@ nav li {
 }
 
 nav a {
-    color: #fff;
+    color: #337ab7;
     text-decoration: none;
-    transition: color 0.2s; /* Adicionei uma transição para o hover */
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
-    color: #ccc; /* Adicionei um efeito de hover */
+    color: #23527c;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff; /* Adicionei um fundo branco */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra */
-    border-radius: 10px; /* Adicionei um cantinho arredondado */
-}
-
+/* Article styles */
 article {
-    background-color: #f7f7f7;
-    padding: 20px;
     margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Adicionei um cantinho arredondado */
 }
 
-h2 {
+article h2 {
     margin-top: 0;
-    font-weight: bold; /* Adicionei um peso de fonte mais forte */
-    color: #333; /* Adicionei uma cor mais escura */
 }
 
+/* Animated link styles */
+.animated-link {
+    transition: color 0.2s ease;
+}
+
+.animated-link-hover {
+    color: #23527c;
+}
+
+/* Animated article styles */
+.animated-article {
+    transition: background-color 0.2s ease;
+}
+
+.animated-article-hover {
+    background-color: #f7f7f7;
+}
+
+/* Footer styles */
 footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra */
-}
-
-/* Animações */
-article {
-    animation: fadeIn 1s;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-nav ul {
-    animation: slideIn 0.5s;
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-nav a:hover {
-    animation: pulse 0.5s;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-footer {
-    animation: bounce 2s;
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-article:before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #333;
-    animation: loading 1s infinite;
-    margin: 20px auto;
-}
-
-@keyframes loading {
-    0% {
-        transform: scale(0);
-    }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
-}
+    clear: both;
+} 
+nav li {
+    margin-right: 20px;
+    display: inline-block; /* Add this to make the links inline */
+  }
+  
+  nav a {
+    padding: 10px; /* Add some padding to make the links more clickable */
+    border-radius: 5px; /* Add a subtle border radius to make the links more rounded */
+    transition: color 0.2s ease, background-color 0.2s ease; /* Add transition to background color as well */
+  }
+  
+  nav a:hover {
+    color: #23527c;
+    background-color: #f7f7f7; /* Add a hover background color to make it more visible */
+  }
