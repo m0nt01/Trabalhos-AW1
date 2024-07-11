@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Responsivo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Adicionei as animações aqui */
+        article {
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        nav ul {
+            animation: slideIn 0.5s;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        nav a:hover {
+            animation: pulse 0.5s;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        footer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            animation: bounce 2s;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        article:before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #333;
+            animation: loading 1s infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <article>
+                <h2>Artigo 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            </article>
+            <article>
+                <h2>Artigo 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            </article>
+            <!-- Adicione mais artigos aqui -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog Responsivo</p>
+    </footer>
+</body>
+</html>
