@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Noticias do IFSP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+        <!-- Adicionado botão para mudar tema -->
+        <button id="theme-toggle" aria-label="Toggle theme" style="background-color: #575757; color: #fff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px;">mudar tema</button>
+    </header>
+    <main>
+       <!-- Adicionado novo carrossel -->
+<section class="carousel">
+    <div class="carousel-container">
+      <div class="carousel-item active">
+        <img src="News.gif" alt="Loading GIF">
+        <div class="carousel-caption">
+          <h2>Noticias do IFSP</h2>
+          <p>Procurados por não aparecerem nas aulas do LUK!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Rafa.png" alt="Rafa">
+        <div class="carousel-caption">
+          <h2>Rafael Santos</h2>
+          <p>Acredita-se que está na academia até hoje.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Erick.png" alt="Erick">
+        <div class="carousel-caption">
+          <h2>Erick Veríssimo</h2>
+          <p>Rolou muito o Feed do Facebook e entrou em outra dimenção?</p>
+        </div>
+      </div>
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="carousel-indicators">
+      <button class="indicator active" data-slide-to="0"></button>
+      <button class="indicator" data-slide-to="1"></button>
+      <button class="indicator" data-slide-to="2"></button>
+    </div>
+  </section>
+        <section class="blog-posts">
+            <h1>Posts Recentes:</h1>
+            <article>
+                <h2>Vício na academia</h2>
+                <p>Rafael Santos, um entusiasta da academia e da musculação, desapareceu misteriosamente durante as férias. De acordo com relatos de amigos e familiares, ele estava muito focado em seus treinos e em manter uma dieta rigorosa. Seu último contato foi em 15 de julho de 2024, quando postou uma foto no Instagram mostrando seu progresso nos últimos meses. Desde então, ninguém sabe onde ele está ou o que aconteceu com ele. As autoridades estão investigando o caso, mas ainda não há pistas concretas sobre seu paradeiro.</p>
+            </article>
+            <article>
+                <h2>Erro no Feed?</h2>
+                <p>Erick Veríssimo, um jovem do IFSP, desapareceu de forma misteriosa em 11 de julho de 2024. Seu último contato foi por meio de um post no Facebook, onde compartilhou um meme engraçado sobre a falta de conteúdo interessante no feed. Desde então, ninguém sabe o que aconteceu com ele.</p>
+                <p>Segundo relatos de vizinhos, no dia seguinte à sua última postagem, eles viram luzes estranhas em sua janela por volta das 2h45min de uma terça-feira. Aparentemente, Erick estava acordado e navegando na internet, mas quando os vizinhos tentaram entrar em contato com ele, não obtiveram sucesso.</p>
+            </article>
+            <article>
+                <h2>Como vai ficar a reposição?</h2>
+                <p>De acordo com o professor de matemática, ele ira repassar o conteúdo e também irá decretar os horários de aula na sua próxima aula.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog IFSP</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
